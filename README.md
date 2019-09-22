@@ -6,3 +6,6 @@ Disciplinas
   - I.P II
   
   - E.D I
+
+  - S.O II
+  
