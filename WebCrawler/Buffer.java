@@ -14,7 +14,7 @@ public class Buffer {
         this.lastReadIndex = 0;
         this.inWork = false;
         this.inRemove = false;
-        this.maxSize = 20;
+        this.maxSize = 10;
     }    
     
     public void add(String link) throws InterruptedException{
@@ -48,9 +48,7 @@ public class Buffer {
                 this.wait();            
             }
             if(this.inRemove){
-                System.out.println("inRemove - waiting...");
                 this.wait();
-                System.out.println("inRemove - return");
             }            
             this.inRemove = true;
             int index = this.buffer.size();
